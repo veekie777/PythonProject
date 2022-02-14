@@ -195,6 +195,7 @@ print("Split the words of the string: %s" % s.split(" "))
 
 # 以下是自学廖雪峰的课程
 # 2022.02.14 "数据类型和变量" complete
+# https://www.liaoxuefeng.com/wiki/1016959663602400/1017063826246112
 
 # 也可以打印整数，或者计算结果：
 print(100+200)
@@ -227,22 +228,23 @@ print(r'\\\n\\')
 # 这表示要转
 print('\\\n\\')
 
-# 换行：除了\n, 还可以用'''...'''表示有多行内容
+# 换行：除了\n, 所见即所得
 # 还可以加上r
 print('''line1
-...line2\n
+line2
 line3''')
 
 print(r'''line1
 ...line2
 ...line3''')
 
-# 为什么不行？？？
+# 三引号是用作换行的，想在里面用变量，就用f开头+{}号
 name = 'vicky'
 age = 77
 gender = 'girl'
-print('''name
-...age''')
+print(f'''{name}
+{age}
+{gender}''')
 
 # 布尔值：一个布尔值只有True、False两种值，常用于条件判断中
 age = 11
