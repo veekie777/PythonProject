@@ -45,6 +45,7 @@ print(FullName)
 a, b = 4, 5
 print(a, b)
 
+# print会依次打印每个字符串，遇到逗号“,”会输出一个空格
 lastname, firstname, gender = "徐", "栋", "男"
 print(lastname, firstname, gender)
 fullname = lastname + firstname

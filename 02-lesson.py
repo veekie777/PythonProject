@@ -41,8 +41,23 @@ info = "张阳冰"
 print(info[0])
 
 
+# 以下是自学廖雪峰的课程
 
+# 也可以打印整数，或者计算结果：
+print(100+200)
+# 可以把计算100 + 200的结果打印得更漂亮一点：
+print("100 + 200 =", 100 + 200)
 
+# input: 是与用户的简单交互。就是需要在下面输入名字，这个程序才会执行！
+name = input('please enter your name:')
+print('hello', name)
+
+# exercise
+a = -1
+if a > 0:
+    print("a is over 0")
+else:
+    print("a is no more than 0")
 
 
 
