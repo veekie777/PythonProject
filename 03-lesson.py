@@ -234,9 +234,6 @@ print('''line1
 line2
 line3''')
 
-print(r'''line1
-...line2
-...line3''')
 
 # 三引号是用作换行的，想在里面用变量，就用f开头+{}号
 name = 'vicky'

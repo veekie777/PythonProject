@@ -49,7 +49,7 @@ print(100+200)
 print("100 + 200 =", 100 + 200)
 
 # input: 是与用户的简单交互。就是需要在下面输入名字，这个程序才会执行！
-name = input('please enter your name:')
+name = input('please enter your name: ')
 print('hello', name)
 
 # exercise

@@ -1,9 +1,9 @@
 # boolean: 布尔值，就是真假
 x = 2
-print(x == 2) # prints out True
-print(x == 3) # prints out False
-print(x < 3) # prints out True
-print(x != 4) #x不等于4
+print(x == 2)   # prints out True
+print(x == 3)   # prints out False
+print(x < 3)    # prints out True
+print(x != 4)   # x不等于4
 
 # Boolean operators 布尔操作符
 name = "John"
@@ -157,9 +157,9 @@ print(classmates[1])             # 找出list里的某个位置
 print(classmates[-1])            # list可以倒着数，但是由于没有-0，所以list里倒着数，从1开始
 classmates.insert(1, 'Jerry')    # 在list某个位置插入
 print(classmates)
-classmates.pop(1)                # 用pop删除某个位置的元素
+classmates.pop(1)                # 用pop删除某个位置的元素,拿出来后还可以继续用
 print(classmates)
-classmates.index('Tom')          # index:提取list的index的位置的值
+classmates.index('Tom')          # index:找到在哪一个位置
 print(classmates)
 classmates[1] = 'Sarah'          # 在某个位置替换
 print(classmates)
@@ -223,4 +223,72 @@ s3 = L[2]
 A3 = s3[2]
 print(A3)
 
-#  end
+
+
+# 以下是自学廖雪峰的课程：2022.02.16
+print('this is my self-learning note for 2022.02.16')
+# 《条件判断》
+
+# if else
+age = 11
+if age >= 18:
+    print('your age is', age)
+    print('adult')
+else:
+    print('teenager')
+# 用elif做更细致的判断.可以有多个elif
+age = 5
+if age >= 18:
+    print('adult')
+elif age >= 6:
+    print('teenager')
+else:
+    print('kid')
+# if还可以简写
+x = 3
+if x:
+    print('True')              # 只要x是非零数值、非空字符串、非空list等，就判断为True，否则为False
+else:
+    print('no')
+
+# input 让程序变得有意思
+# t = input('birth: ')           # input返回的是str，不能和整数比较
+# birthyear = int(t)             # 所以要先把str变成整数int
+# if birthyear >= 1990:
+#     print('90后')
+# else:
+#     print('90前')
+
+
+# 练习：
+# 小明身高1.75，体重80.5kg。
+# 根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数
+# 低于18.5：过轻
+# 18.5-25：正常
+# 25-28：过重
+# 28-32：肥胖
+# 高于32：严重肥胖
+# 用if-elif判断并打印结果：
+
+height = 1.75
+weight = 85
+BMI = weight / (height ** 2)
+if BMI <= 18.5:
+    print('过轻')
+elif 18.5 < BMI <= 25:
+    print('正常')
+elif 25 < BMI <= 28:
+    print('过重')
+elif 28 < BMI <= 32:
+    print('肥胖')
+elif BMI > 32:
+    print('严重肥胖')
+
+
+
+
+
+
+
+
+
