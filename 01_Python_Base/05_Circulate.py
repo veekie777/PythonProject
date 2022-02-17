@@ -22,12 +22,22 @@ print(sum)
 
 # while循环
 # 0到99之间的奇数之和
+# 方法一：
 sum = 0
 n = 99
 while n > 0:
     sum = sum + n
     n = n - 2
 print(sum)
+
+# 方法二：
+sum = 0
+n = 1
+while n < 100:
+    sum = sum + n
+    n = n + 2
+print(sum)
+
 
 # list里放满1到1000
 x = []

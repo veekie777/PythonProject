@@ -64,3 +64,122 @@ d[1] = tuple1
 print(d)
 d[tuple1] = tuple1         # dict里，key不能变（所以能放tuple1），但是value可以变
 print(d)
+
+
+
+# 作业
+# 题目1: 打印楼梯
+# *
+# **
+# ***
+# ****
+# *****
+# ******
+# *******
+# ********
+n = 1
+x = '*'
+while n <= 8:
+    print(x)
+    x = '*' * (n + 1)
+    n = n + 1
+
+# 题目2: 打印n阶楼梯
+# *
+# **
+# ***
+# ****
+# ...
+# ...
+# *************
+# **************
+n = 1
+x = '*'
+while n <= 14:
+    print(x)
+    x = '*' * (n + 1)
+    n = n + 1
+
+# 题目3: 打印金字塔
+#      *
+#     ***
+#    *****
+#   *******
+#  *********
+# ***********
+n1 = 1
+n2 = 5
+x1 = '*'
+x2 = ' '
+while n1 <= 11 and n2 >= 0:
+    s = x2 * n2 + x1 * n1 + x2 * n2
+    print(s)
+    n1 = n1 + 2
+    n2 = n2 - 1
+
+
+# 题目4: 打印n阶金字塔
+#      *
+#     ***
+#    *****
+#   .......
+#  .........
+# ***********
+n1 = 1
+n2 = 5
+x1 = '*'
+x2 = ' '
+while n1 <= 11 and n2 >= 0:
+    s = x2 * n2 + x1 * n1 + x2 * n2
+    print(s)
+    n1 = n1 + 2
+    n2 = n2 - 1
+    if n2 < 0:
+        break
+while n1 >= 11 and n1 < 20:
+    n1 = n1 + 2
+    s = x1 * n1
+    print(s)
+
+
+
+# 预习：《函数》
+
+def myabs(x):
+    if x >= 0:
+        return (x)
+    else:
+        return (-x)
+print(myabs(-55))
+print(0)
+
+# 定义一个什么事也不做的空函数，可以用pass语句
+def nop():
+    pass
+print(nop())
+# 实际上pass可以用来作为占位符，比如现在还没想好怎么写函数的代码，就可以先放一个pass，让代码能运行起来。
+# 后面想好了这里的代码要做什么，再来改pass。不写pass，就有语法错误
+# if age >= 18:
+#     pass
+
+# 参数检查：可以用内置函数isinstance()实现
+
+# 返回多个值
+# import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数
+import math
+x = math.sqrt(4)
+print(int(x))
+print('%.5f' % x)
+
+# 计算x的平方
+def power(x):
+    return x ** 2
+print(power(3))
+print(int(power(4.15)))        # 四舍五入
+
+# 计算x的n次方
+def power(x, n):
+    s = 1
+    while n > 0:
+
+
