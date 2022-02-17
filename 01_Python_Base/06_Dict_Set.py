@@ -77,12 +77,19 @@ print(d)
 # ******
 # *******
 # ********
+# n = 1
+# x = '*'
+# while n <= 8:
+#     print(x)
+#     x = '*' * (n + 1)
+#     n = n + 1
+
 n = 1
 x = '*'
 while n <= 8:
-    print(x)
-    x = '*' * (n + 1)
+    print(x * n)
     n = n + 1
+
 
 # 题目2: 打印n阶楼梯
 # *
@@ -107,15 +114,25 @@ while n <= 14:
 #   *******
 #  *********
 # ***********
-n1 = 1
-n2 = 5
+# n1 = 1
+# n2 = 5
+# x1 = '*'
+# x2 = ' '
+# while n1 <= 11 and n2 >= 0:
+#     s = x2 * n2 + x1 * n1 + x2 * n2
+#     print(s)
+#     n1 = n1 + 2
+#     n2 = n2 - 1
+
+n = 1
 x1 = '*'
 x2 = ' '
-while n1 <= 11 and n2 >= 0:
-    s = x2 * n2 + x1 * n1 + x2 * n2
-    print(s)
-    n1 = n1 + 2
-    n2 = n2 - 1
+max = 100
+while n <= max:
+    space = ' ' * (max - n)
+    star = x1 * (2*n - 1)
+    print(space + star)
+    n = n + 1
 
 
 # 题目4: 打印n阶金字塔
@@ -178,8 +195,41 @@ print(power(3))
 print(int(power(4.15)))        # 四舍五入
 
 # 计算x的n次方
-def power(x, n):
-    s = 1
-    while n > 0:
+# def power(x, n):
+#     s = 1
+#     while n > 0:
+
+
+
+# 二进制
+0
+1
+10   # 2
+11
+100
+101
+110
+111
+1000
+1001  # 9
+
+# 十六进制
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+A
+B
+C
+D
+E
+F   # 15
+
 
 
