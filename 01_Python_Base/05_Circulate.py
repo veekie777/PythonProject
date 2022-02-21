@@ -17,7 +17,7 @@ print(range(101))           # range(0, 101)
 sum = 0
 for x in range(101):
     sum = sum + x
-print(sum)
+    print(sum)
 
 
 # while循环
@@ -58,7 +58,7 @@ while n <= 100:
 print('END', n)
 
 n = 1
-while n <= 100:
+while n <= 100: 
     print(n)
     n = n + 1
     if n > 10:

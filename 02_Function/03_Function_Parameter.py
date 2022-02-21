@@ -114,8 +114,9 @@ f2(1, 2, d=99, ext=None)        # a = 1 b = 2 c = 0 d = 99 kw = {'ext': None}
 args = (1, 2, 3, 4)
 kw = {'d': 99, 'x': '#'}
 print('----------1')
-f1(args, 'bbb', **kw)           # a = (1, 2, 3, 4) b = bbb c = 0 args =  kw = {'d': 99, 'x': '#'}
+f1(args, 'bbb', **kw)           # a = (1, 2, 3, 4) b = bbb c = 0 args = () kw = {'d': 99, 'x': '#'}
 f1(*args, **kw)                 # a = 1 b = 2 c = 3 args = (4,) kw = {'d': 99, 'x': '#'}
+f1(0, *args, **kw)              # a = 0 b = 1 c = 2 args = (3, 4) kw = {'d': 99, 'x': '#'}
 
 print('----------2')
 args = (1, 2, 3)
