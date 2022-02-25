@@ -29,11 +29,13 @@ def trim(s):
             idx = idx + 1
     return s
 
+print(trim('  12  54  64165  '))
 
-print(trim('  1  54  64165  '))
 
 
-# 去掉收尾的空格
+
+
+# 去掉首尾的空格
 def trim1(d):
     if len(d) == 0:
         return d
