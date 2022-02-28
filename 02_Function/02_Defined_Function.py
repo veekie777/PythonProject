@@ -14,7 +14,6 @@ def divide(x, y):
         return
     return x / y
 
-
 print(int(divide(8, 2)))
 print(divide(8, 0))
 print(float(divide(8, 2)))
@@ -38,7 +37,6 @@ print(my_abs(1))
 
 
 # 函数可以返回多个值，放在Tuple里
-
 def getResult(x):
     return x**2, x**3, x**4, x**5
 
@@ -95,6 +93,7 @@ stair(4)
 
 # 预习：
 # 计算x的n次方
+
 def power(x, n):
     s = 1
     while n > 0:

@@ -64,7 +64,12 @@ for x in s:
         print('y在字符串的位置:', n+1)
 
 
+
 # 同时打印y和o的位置
+
+
+
+
 
 
 def same(s, k):

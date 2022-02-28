@@ -24,9 +24,9 @@ def odd():
     print('step 1')
     yield 1
     print('step 2')
-    yield(3)
+    yield 3
     print('step 3')
-    yield(5)
+    yield 5
 
 
 od = odd()
@@ -50,7 +50,7 @@ print(next(opr))
 # 联系()
 print(next(opr))
 
-# 直接这么写，相当于每次重新开始走。相当于三个实例，每次只走了一次
+# 直接这么写，相当于每次重新开始走。相当于三个实例，每次只走了一次m
 next(odd())
 next(odd())
 next(odd())
