@@ -17,8 +17,9 @@ print(L)
 
 
 # reduce:
-# educe把一个函数作用在一个序列[x1, x2, x3, ...]上，
+# reduce把一个函数作用在一个序列[x1, x2, x3, ...]上，
 # 这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算
+# 记住！！！reduce返回的是结果，不是list！所以前面不用加list；而map需要！！
 
 from functools import reduce
 def fn(x, y):
@@ -40,10 +41,60 @@ print(L)
 
 
 
+# 练习题（1）：
+# 利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。
+# 输入：['adam', 'LISA', 'barT']，输出：['Adam', 'Lisa', 'Bart']：
+
+# 方法一：
+a = ['adam', 'LISA', 'barT']
+def let(x):
+    n = 0
+    b = []
+    while n < len(a):
+        for x in a:
+            x = a[n]
+            b.append(x[0].upper() + x[1:].lower())
+            n = n + 1
+        return b
+
+L = list(let(a))
+print(L)
+
+# 方法二：
+def let(x):
+    return x[0].upper() + x[1:].lower()
+
+L = list(map(let, a))
+print(L)
 
 
 
+# 练习题（2）
+# Python提供的sum()函数可以接受一个list并求和，
+# 请编写一个prod()函数，可以接受一个list并利用reduce()求积
 
+from functools import reduce
+def prod(x, y):
+    return x * y
+
+l = reduce(prod, [3, 5, 7, 9])
+print(l)
+
+
+# 练习题（3）
+# 利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456：
+s = '123.456'
+def str2float(x, y):
+    return x * 10 + y
+
+def str(s):
+    s = s.replace('.', '')
+    digits = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '.': 'none'}
+    return digits[s]
+
+print(list(map(str, s)))
+# L = reduce(str2float, map(str, s))
+# print(L)
 
 
 
