@@ -20,6 +20,9 @@ print(L)
 print('  kjlkj lkjlkj '.strip())
 
 # string.strip函数讲解：https://blog.csdn.net/csdn15698845876/article/details/73469234
+# 如果strip()的参数为空，那么会默认删除字符串头和尾的空白字符(包括\n，\r，\t这些)
+# 或者要删除首尾的某些元素：print(a.strip('abs')
+# lstrip()和rstrip(), 一个是去掉左边的(头部)，一个是去掉右边的(尾部)
 
 
 # 求素数
@@ -43,6 +46,10 @@ def sushu(s):
 
 L = list(sushu(su))
 print(L)
+
+
+
+
 
 def sushu(x):
         if x == 1:

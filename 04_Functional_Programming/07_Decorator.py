@@ -15,6 +15,7 @@ print(f.__name__)      # 拿到函数名字
 # 假设我们要增强now()函数的功能，
 # 比如，在函数调用前后自动打印日志，但又不希望修改now()函数的定义，
 # 这种在代码运行期间动态增加功能的方式，称之为“装饰器”（Decorator）
+# 以下是标注化写法
 def log(func):
     def wrapper(*args, **kw):
         # 下面这一句，是你要做的事情
@@ -28,9 +29,22 @@ def log(func):
 
 @log                     # 在最前面可以打一行相同的代码
 def now2():
-    print('2015-3-25')
+    # 先执行log           # call now2():
+    print('now2')        # now2
+
+
+@log                     # 在最前面可以打一行相同的代码
+def now3():
+    print('now3')
+
+
+@log                     # 在最前面可以打一行相同的代码
+def now4():
+    print('now4')
 
 now2()
+now3()
+now4()
 
 # 把@log放到now()函数的定义处，相当于执行了语句：
 now2 = log(now2)       # 和@log，是一句话
